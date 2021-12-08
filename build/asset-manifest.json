@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c0461e00.chunk.css",
+    "main.js": "/static/js/main.67e57ea2.chunk.js",
+    "main.js.map": "/static/js/main.67e57ea2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.de2ce6ea.js",
+    "runtime-main.js.map": "/static/js/runtime-main.de2ce6ea.js.map",
+    "static/js/2.aaf32889.chunk.js": "/static/js/2.aaf32889.chunk.js",
+    "static/js/2.aaf32889.chunk.js.map": "/static/js/2.aaf32889.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.c0461e00.chunk.css.map": "/static/css/main.c0461e00.chunk.css.map",
+    "static/js/2.aaf32889.chunk.js.LICENSE.txt": "/static/js/2.aaf32889.chunk.js.LICENSE.txt",
+    "static/media/Book.module.css": "/static/media/cook2.bae9045c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de2ce6ea.js",
+    "static/js/2.aaf32889.chunk.js",
+    "static/css/main.c0461e00.chunk.css",
+    "static/js/main.67e57ea2.chunk.js"
+  ]
+}

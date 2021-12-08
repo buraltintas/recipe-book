@@ -1,0 +1,103 @@
+.AddRecipeContainer {
+  width: 40rem;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 0.3rem solid #495057;
+  border-radius: 1rem;
+  transition: all 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #495057;
+  font-family: Readex Pro, sans-serif;
+}
+
+.form label {
+  font-size: 1.5rem;
+}
+
+.form input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  height: 3rem;
+  font-family: Readex Pro, sans-serif;
+  border: 0.1rem solid #495057;
+  border-radius: 1rem;
+  text-indent: 0.7rem;
+}
+
+.ingredients {
+  height: 20rem !important;
+  width: 18rem;
+  border: 0.1rem solid #495057;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: Readex Pro, sans-serif;
+}
+
+.upload {
+  text-align: center;
+  padding-top: 0.4rem;
+  font-family: Readex Pro, sans-serif;
+}
+
+.ingcontainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.descontainer {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.description {
+  height: 20rem !important;
+  width: 18rem;
+  border: 0.1rem solid #495057;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: Readex Pro, sans-serif;
+}
+
+.descAndCook {
+  display: flex;
+}
+
+.addButton {
+  height: 4rem;
+  font-family: Readex Pro, sans-serif;
+  border: 1px solid #868e96;
+  background: #fff5f5;
+  color: #fa5252;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 0.7rem;
+  margin-left: 1rem;
+}
+
+.addButton:hover,
+.addButton:active {
+  background: #fa5252;
+  color: #fff5f5;
+  border-color: #868e96;
+}
+
+.addButton:focus {
+  outline: none;
+}

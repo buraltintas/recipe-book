@@ -1,0 +1,56 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  display: flex;
+  margin: 1rem;
+}
+
+.header svg {
+  height: 10rem;
+  border-right: 0.1rem solid #495057;
+  width: 10rem;
+  padding-right: 1.5rem;
+}
+
+.logoP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10rem;
+  color: #495057;
+  font-family: Readex Pro, sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-left: 1.5rem;
+}
+
+.addButton {
+  width: 12rem;
+
+  font-family: Readex Pro, sans-serif;
+  border: 1px solid #868e96;
+  background: #fff5f5;
+  color: #fa5252;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 0.7rem;
+  margin-right: 2rem;
+}
+
+.addButton:hover,
+.addButton:active {
+  background: #fa5252;
+  color: #fff5f5;
+  border-color: #868e96;
+}
+
+.addButton:focus {
+  outline: none;
+}
