@@ -124,6 +124,7 @@ const AddRecipe = () => {
                 ref={ingredientsRef}
                 value={ingredients}
                 onChange={onIngredientsChange}
+                maxLength={450}
               />
             </div>
             <div className={classes.descontainer}>
@@ -136,6 +137,7 @@ const AddRecipe = () => {
                 ref={descriptionRef}
                 value={description}
                 onChange={onDescriptionChange}
+                maxLength={1250}
               />
             </div>
           </div>

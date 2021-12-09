@@ -126,14 +126,16 @@ function Book() {
 
         {meals.map((meal) => (
           <section className={classes.page} key={meal.id}>
-            <h2>{meal.title}</h2>
+            <div className={classes.pageHeader}>
+              <img src={meal.image} alt="meal" />
+              <h2>{meal.title}</h2>
+            </div>
             <div className={classes.author}>
               <h4>Kimden: </h4>
 
               <h4> {meal.name}</h4>
             </div>
             <div className={classes.pageContainer1}>
-              <img src={meal.image} alt="meal" />
               <div className={classes.ingredients}>
                 <h3>Malzemeler:</h3>
                 <p>{meal.ingredients}</p>
