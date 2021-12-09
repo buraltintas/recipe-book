@@ -101,3 +101,12 @@
 .addButton:focus {
   outline: none;
 }
+
+.added {
+  font-family: Readex Pro, sans-serif;
+  color: #495057;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

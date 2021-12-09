@@ -7,6 +7,7 @@ const AddRecipe = () => {
   const [image, setImage] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [description, setDescription] = useState("");
+  const [done, setDone] = useState(false);
 
   const onNameChange = (e) => {
     setName(e.target.value);
@@ -68,6 +69,12 @@ const AddRecipe = () => {
     setImage("");
     setIngredients("");
     setTitle("");
+
+    setDone(true);
+
+    setTimeout(() => {
+      setDone(false);
+    }, 2000);
   };
 
   const reloadPage = () => {
@@ -76,72 +83,78 @@ const AddRecipe = () => {
 
   return (
     <div className={classes.AddRecipeContainer}>
-      <form className={classes.form} onSubmit={addRecipeHandler}>
-        <label htmlFor="name">İsminiz</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          ref={nameRef}
-          value={name}
-          onChange={onNameChange}
-        />
-        <label htmlFor="title">Yemeğin adı</label>
-        <input
-          type="text"
-          required
-          name="title"
-          ref={titleRef}
-          value={title}
-          onChange={onTitleChange}
-        />
-        <label htmlFor="image">Yemeğin resmi (URL)</label>
-        <input
-          type="url"
-          name="image"
-          className={classes.upload}
-          ref={imageRef}
-          value={image}
-          onChange={onImageChange}
-        />
-        <div className={classes.descAndCook}>
-          <div className={classes.ingcontainer}>
-            <label htmlFor="ingredients">Malzemeler</label>
-            <textarea
-              type="text"
-              id="ingredients"
-              className={classes.ingredients}
-              required
-              ref={ingredientsRef}
-              value={ingredients}
-              onChange={onIngredientsChange}
-            />
+      {!done ? (
+        <form className={classes.form} onSubmit={addRecipeHandler}>
+          <label htmlFor="name">İsminiz</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            ref={nameRef}
+            value={name}
+            onChange={onNameChange}
+          />
+          <label htmlFor="title">Yemeğin adı</label>
+          <input
+            type="text"
+            required
+            name="title"
+            ref={titleRef}
+            value={title}
+            onChange={onTitleChange}
+          />
+          <label htmlFor="image">Yemeğin resmi (URL)</label>
+          <input
+            type="url"
+            name="image"
+            className={classes.upload}
+            ref={imageRef}
+            value={image}
+            onChange={onImageChange}
+          />
+          <div className={classes.descAndCook}>
+            <div className={classes.ingcontainer}>
+              <label htmlFor="ingredients">Malzemeler</label>
+              <textarea
+                type="text"
+                id="ingredients"
+                className={classes.ingredients}
+                required
+                ref={ingredientsRef}
+                value={ingredients}
+                onChange={onIngredientsChange}
+              />
+            </div>
+            <div className={classes.descontainer}>
+              <label htmlFor="description">Nasıl pişirilir?</label>
+              <textarea
+                type="text"
+                id="description"
+                className={classes.description}
+                required
+                ref={descriptionRef}
+                value={description}
+                onChange={onDescriptionChange}
+              />
+            </div>
           </div>
-          <div className={classes.descontainer}>
-            <label htmlFor="description">Nasıl pişirilir?</label>
-            <textarea
-              type="text"
-              id="description"
-              className={classes.description}
-              required
-              ref={descriptionRef}
-              value={description}
-              onChange={onDescriptionChange}
-            />
+          <div>
+            <button className={classes.addButton}>Tarifi Ekle</button>
+            <button
+              type="button"
+              className={classes.addButton}
+              onClick={reloadPage}
+            >
+              Kitabı Güncelle
+            </button>
           </div>
+        </form>
+      ) : (
+        <div className={classes.added}>
+          <h1>Tarifiniz eklendi!</h1>
         </div>
-        <div>
-          <button className={classes.addButton}>Tarifi Ekle</button>
-          <button
-            type="button"
-            className={classes.addButton}
-            onClick={reloadPage}
-          >
-            Kitabı Güncelle
-          </button>
-        </div>
-      </form>
+      )}
     </div>
   );
 };
