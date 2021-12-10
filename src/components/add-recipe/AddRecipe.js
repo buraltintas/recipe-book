@@ -34,6 +34,7 @@ const AddRecipe = () => {
   const imageRef = useRef("");
   const ingredientsRef = useRef("");
   const descriptionRef = useRef("");
+  const categoryRef = useRef("");
 
   async function postRecipeHandler(meals) {
     const response = await fetch(
@@ -59,6 +60,7 @@ const AddRecipe = () => {
       image: imageRef.current.value,
       ingredients: ingredientsRef.current.value,
       description: descriptionRef.current.value,
+      category: categoryRef.current.value,
       id: Math.random(),
     };
 
@@ -103,6 +105,7 @@ const AddRecipe = () => {
             ref={titleRef}
             value={title}
             onChange={onTitleChange}
+            maxLength={25}
           />
           <label htmlFor="image">Yemeğin resmi (URL)</label>
           <input
@@ -113,6 +116,19 @@ const AddRecipe = () => {
             value={image}
             onChange={onImageChange}
           />
+          <label htmlFor="category">Kategori seçiniz</label>
+          <select
+            name="category"
+            id="category"
+            ref={categoryRef}
+            className={classes.categories}
+          >
+            <option value="Ana yemekler">Ana yemekler</option>
+            <option value="Salatalar">Salatalar</option>
+            <option value="Mezeler">Mezeler</option>
+            <option value="Sokak yemekleri">Sokak yemekleri</option>
+            <option value="Tatlılar">Tatlılar</option>
+          </select>
           <div className={classes.descAndCook}>
             <div className={classes.ingcontainer}>
               <label htmlFor="ingredients">Malzemeler</label>
@@ -141,7 +157,7 @@ const AddRecipe = () => {
               />
             </div>
           </div>
-          <div>
+          <div className={classes.buttons}>
             <button className={classes.addButton}>Tarifi Ekle</button>
             <button
               type="button"
@@ -154,7 +170,7 @@ const AddRecipe = () => {
         </form>
       ) : (
         <div className={classes.added}>
-          <h1>Tarifiniz eklendi!</h1>
+          <h1 className={classes.addedText}>Tarifiniz eklendi!</h1>
         </div>
       )}
     </div>

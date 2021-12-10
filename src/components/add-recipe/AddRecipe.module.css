@@ -31,7 +31,7 @@
   font-family: Readex Pro, sans-serif;
   border: 0.1rem solid #495057;
   border-radius: 1rem;
-  text-indent: 0.7rem;
+  padding: 0.7rem;
 }
 
 .ingredients {
@@ -39,14 +39,25 @@
   width: 18rem;
   border: 0.1rem solid #495057;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.7rem;
   font-family: Readex Pro, sans-serif;
 }
 
 .upload {
-  text-align: center;
-  padding-top: 0.4rem;
+  padding: 0.7rem;
   font-family: Readex Pro, sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+.categories {
+  font-size: 1.5rem;
+  font-family: Readex Pro, sans-serif;
+  border: 0.1rem solid #495057;
+  border-radius: 1rem;
+  padding: 0.7rem;
 }
 
 .ingcontainer {
@@ -69,7 +80,7 @@
   width: 18rem;
   border: 0.1rem solid #495057;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.7rem;
   font-family: Readex Pro, sans-serif;
 }
 
@@ -79,6 +90,7 @@
 
 .addButton {
   height: 4rem;
+  width: 15rem;
   font-family: Readex Pro, sans-serif;
   border: 1px solid #868e96;
   background: #fff5f5;
@@ -87,8 +99,6 @@
   cursor: pointer;
   border-radius: 1rem;
   text-align: center;
-  margin-top: 0.7rem;
-  margin-left: 1rem;
 }
 
 .addButton:hover,
@@ -109,4 +119,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.addedText {
+  font-size: 3rem;
+}
+
+@media (max-width: 40em) {
+  .addButton {
+    font-size: 0.5remrem;
+  }
 }

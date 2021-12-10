@@ -3,11 +3,15 @@ import classes from "./Header.module.css";
 
 import AddRecipe from "../add-recipe/AddRecipe";
 
-const Header = () => {
+const Header = (props) => {
   const [showAddRecipe, setShowAddRecipe] = useState(false);
 
   const showAddRecipeHandler = () => {
     setShowAddRecipe(!showAddRecipe);
+  };
+
+  const showMainHandler = () => {
+    props.showMain();
   };
 
   return (
@@ -94,6 +98,16 @@ const Header = () => {
           </div>
         </div>
         <div>
+          {props.showBook && (
+            <button onClick={showMainHandler} className={classes.addButton}>
+              Anasayfaya Git
+            </button>
+          )}
+          {props.showHomePage && (
+            <button onClick={showMainHandler} className={classes.addButton}>
+              Anasayfaya Git
+            </button>
+          )}
           <button className={classes.addButton} onClick={showAddRecipeHandler}>
             {!showAddRecipe ? "Yeni Tarif Ekle" : "Formu Kapat"}
           </button>

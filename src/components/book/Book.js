@@ -21,6 +21,7 @@ function Book() {
             ingredients: data[key].ingredients,
             description: data[key].description,
             image: data[key].image,
+            category: data[key].category,
           });
         }
 
@@ -132,8 +133,9 @@ function Book() {
             </div>
             <div className={classes.author}>
               <h4>Kimden: </h4>
-
-              <h4> {meal.name}</h4>
+              <h4>{meal.name}</h4>
+              <h4 className={classes.category}>Kategori: </h4>
+              <h4>{meal.category}</h4>
             </div>
             <div className={classes.pageContainer1}>
               <div className={classes.ingredients}>

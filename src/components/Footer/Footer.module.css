@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
   font-family: Readex Pro, sans-serif;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
+  color: #343a40;
+  font-size: 1.1rem;
 }
 
 .copyright {
@@ -12,7 +16,6 @@
   margin-top: 0.2rem;
   text-align: center;
   font-weight: 400;
-  font-size: 1.2rem;
 }
 
 .logo {

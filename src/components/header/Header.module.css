@@ -54,3 +54,9 @@
 .addButton:focus {
   outline: none;
 }
+
+@media (max-width: 27em) {
+  .addButton {
+    font-size: 1.3rem;
+  }
+}
