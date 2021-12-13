@@ -46,7 +46,7 @@ const Search = (props) => {
       </div>
       <div className={classes.error}>
         {filteredItems.length === 0 && (
-          <p>Tarif bulunamadı. Yeniden deneyiniz</p>
+          <p>Tarif bulunamadı. Yeniden deneyiniz.</p>
         )}
       </div>
 
