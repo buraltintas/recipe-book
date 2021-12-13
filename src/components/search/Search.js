@@ -44,6 +44,11 @@ const Search = (props) => {
           />
         </svg>
       </div>
+      <div className={classes.error}>
+        {filteredItems.length === 0 && (
+          <p>Tarif bulunamadı. Yeniden deneyiniz</p>
+        )}
+      </div>
 
       {filterText &&
         itemsToDisplay.map((item) => (
@@ -53,17 +58,18 @@ const Search = (props) => {
               <h3 className={classes.title}>{item.title}</h3>
               <p className={classes.category}>{item.category}</p>
             </div>
-
-            <div className={classes.info}>
-              <div className={classes.ingredients}>
-                <h3>Malzemeler:</h3>
-                <p>{item.ingredients}</p>
+            <details>
+              <div className={classes.info}>
+                <div className={classes.ingredients}>
+                  <h3>Malzemeler:</h3>
+                  <p>{item.ingredients}</p>
+                </div>
+                <div className={classes.howToCook}>
+                  <h3>Nasıl pişirilir:</h3>
+                  <p>{item.description}</p>
+                </div>
               </div>
-              <div className={classes.howToCook}>
-                <h3>Nasıl pişirilir:</h3>
-                <p>{item.description}</p>
-              </div>
-            </div>
+            </details>
           </div>
         ))}
     </div>
