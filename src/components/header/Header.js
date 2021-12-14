@@ -12,6 +12,7 @@ const Header = (props) => {
 
   const showMainHandler = () => {
     props.showMain();
+    setShowAddRecipe(false);
   };
 
   return (
@@ -108,9 +109,22 @@ const Header = (props) => {
               Anasayfaya Git
             </button>
           )}
-          <button className={classes.addButton} onClick={showAddRecipeHandler}>
-            {!showAddRecipe ? "Yeni Tarif Ekle" : "Formu Kapat"}
-          </button>
+          {props.showBook && (
+            <button
+              className={classes.addButton}
+              onClick={showAddRecipeHandler}
+            >
+              {!showAddRecipe ? "Yeni Tarif Ekle" : "Formu Kapat"}
+            </button>
+          )}
+          {props.showHomePage && (
+            <button
+              className={classes.addButton}
+              onClick={showAddRecipeHandler}
+            >
+              {!showAddRecipe ? "Yeni Tarif Ekle" : "Formu Kapat"}
+            </button>
+          )}
         </div>
       </div>
       {showAddRecipe && <AddRecipe />}

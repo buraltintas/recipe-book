@@ -115,6 +115,7 @@ const AddRecipe = () => {
             ref={imageRef}
             value={image}
             onChange={onImageChange}
+            required
           />
           <label htmlFor="category">Kategori seçiniz</label>
           <select
@@ -126,6 +127,9 @@ const AddRecipe = () => {
             <option value="Ana yemekler">Ana yemekler</option>
             <option value="Salatalar">Salatalar</option>
             <option value="Mezeler">Mezeler</option>
+            <option value="Çorbalar">Çorbalar</option>
+            <option value="Makarnalar">Makarnalar</option>
+            <option value="Karadeniz yemekleri">Karadeniz yemekleri</option>
             <option value="Sokak yemekleri">Sokak yemekleri</option>
             <option value="Tatlılar">Tatlılar</option>
           </select>

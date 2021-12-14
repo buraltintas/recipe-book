@@ -8,15 +8,15 @@ const Search = (props) => {
     setFilterText(e.target.value.toLocaleLowerCase());
   };
 
-  const items = props.items;
+  const meals = props.meals;
 
-  const filteredItems = items.filter(
+  const filteredItems = meals.filter(
     (item) =>
       item.description.toLocaleLowerCase().includes(filterText) ||
       item.title.toLocaleLowerCase().includes(filterText)
   );
 
-  const itemsToDisplay = filterText ? filteredItems : items;
+  const itemsToDisplay = filterText ? filteredItems : meals;
 
   return (
     <div>
@@ -59,6 +59,7 @@ const Search = (props) => {
               <p className={classes.category}>{item.category}</p>
             </div>
             <details>
+              <summary>Tarifi göster</summary>
               <div className={classes.info}>
                 <div className={classes.ingredients}>
                   <h3>Malzemeler:</h3>

@@ -89,7 +89,7 @@ function App() {
           </div>
         </main>
       )}
-      {showSearch && <Search items={mealList} />}
+      {showSearch && <Search meals={mealList} />}
       {showBook && <Book meals={mealList} />}
       <Footer />
     </div>

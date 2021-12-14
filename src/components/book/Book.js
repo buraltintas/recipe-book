@@ -1,38 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HTMLFlipBook from "react-pageflip";
 import classes from "./Book.module.css";
 
-function Book() {
-  const [meals, setMeals] = useState([]);
-
-  function fetchMeals() {
-    fetch("https://what-a-recipe-book-default-rtdb.firebaseio.com/meals.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const loadedMeals = [];
-
-        for (const key in data) {
-          loadedMeals.push({
-            id: key,
-            title: data[key].title,
-            name: data[key].name,
-            ingredients: data[key].ingredients,
-            description: data[key].description,
-            image: data[key].image,
-            category: data[key].category,
-          });
-        }
-
-        setMeals(loadedMeals);
-      });
-  }
-
-  useEffect(() => {
-    fetchMeals();
-    return () => {};
-  }, []);
+function Book(props) {
+  const meals = props.meals;
 
   return (
     <div className={classes.container}>
